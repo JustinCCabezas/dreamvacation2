@@ -1,0 +1,51 @@
+h1 {
+	color : red;
+}
+p	{
+	color : red;
+}
+body {
+	margin : 0;
+}
+
+
+#navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: red;
+	overflow:hidden;
+	position:fixed;
+	top:0;
+	width:100%;
+}
+
+.navitem {
+	text-align:center;
+	float:left;
+}	
+
+.navitem:last-child {
+}
+
+.navitem a {
+	display: block;
+	width:100px;
+	color: white;
+	text-decoration: none;
+	padding: 8px 16px;
+}
+.navitem a.active {
+	background-color:lightgray;
+	color:red;
+}	
+
+.navitem a:hover:not(.active) {
+	background-color:white;
+	color:red;
+}
+
+#main {
+	margin-top:30px;
+	padding:20px;
+}

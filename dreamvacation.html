@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css"
+			  href= "style3.css">
+  <title>New York</title>				  
+</head>
+
+<body>
+	<!-- BEGIN NAVIGATION BAR -->
+			<ul id="navbar">
+				<li class ="navitem"><a class="active" href="dreamvacation.html">dreamvacation</a></li>
+				<li class ="navitem"><a href="Why.html">Why</a></li>
+			</ul>
+	<!-- END NAVIGATION BAR -->
+	    
+<div id="map" style="width:100%;height:500px;margin-top:80px"></div>
+<h1>My Dream Vacation: New York City</h1>
+<p>New York City is my number one place to go. I've never been to New York, but If I do go, 
+I'd visit all of the famous land marks. I always wondered what it'll feel like walking 
+on the Brooklyn Bridge. And I hear that Madison Square Garden has a lot of stuff in there. 
+Since the Knicks play there, it would make sense to go pay a visit too. Times Square is 
+my major stop. Times Square is super famous and during new year's eve it's crazy there. </p>
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(40.712784, -74.005941);
+ 
+  var mapCanvas = document.getElementById("map");
+  
+  var mapOptions = {
+     center: myCenter, 
+     zoom: 5
+  };
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+  var marker = new google.maps.Marker({position:myCenter});
+
+  marker.setMap(map);
+
+  var origin = new google.maps.LatLng(40.712784, -74.005941);
+  var marker2 = new google.maps.Marker({position:origin});
+  marker2.setMap(map);
+
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZpcgnEFnyBIqc_5zfw8EIR5ldMd34Ndk&callback=myMap"></script>
+
+</body>
+</html>
